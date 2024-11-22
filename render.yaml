@@ -6,3 +6,20 @@ services:
     dockerfilePath: Dockerfile
     buildCommand: "composer install --no-dev && php artisan config:cache && php artisan route:cache"
     startCommand: "php artisan serve --host=0.0.0.0 --port=$PORT"
+    envVars:
+      DB_CONNECTION: pgsql
+      DB_HOST: dpg-csvvvu1opnds73a5q640-a.ohio-postgres.render.com
+      DB_PORT: '5432'
+      DB_DATABASE: csg_database_ac5q
+      DB_USERNAME: csg_database_ac5q_user
+      DB_PASSWORD: 9qVknlVAidwbmWYhxS6GRno9NYNDZjkt
+      APP_ENV: production
+      APP_KEY: base64:1BlxDIINQzX+AWfDlvB4VF8pnH4hZXssgycgd26/49s=
+      APP_DEBUG: false
+      APP_URL: https://csg-laravel.onrender.com  # Cambia esto si tu URL de Render es diferente
+      MAIL_MAILER: log
+      SESSION_DRIVER: database
+      QUEUE_CONNECTION: database
+      CACHE_STORE: database
+      LOG_CHANNEL: stack
+      LOG_LEVEL: warning
